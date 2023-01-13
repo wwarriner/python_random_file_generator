@@ -173,7 +173,7 @@ def _main_interface() -> None:
         _arg(CHUNK_SIZE_BYTES),
         metavar="CHUNK_BYTES",
         help=f"Number of bytes per chunk to write to each file.\nDefault: {Byte(DEFAULT_CHUNK_SIZE_BYTES)}",
-        type=int,
+        type=Byte,
         nargs="?",
         default=DEFAULT_CHUNK_SIZE_BYTES,
     )
@@ -191,7 +191,7 @@ def _main_interface() -> None:
         _arg(NUMBER_OF_FILES),
         metavar="N",
         help=f"Number of files to create.\nDefault: {DEFAULT_NUMBER_OF_FILES}",
-        type=Byte,
+        type=int,
         nargs="?",
         default=DEFAULT_NUMBER_OF_FILES,
     )
